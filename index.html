@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	  <meta charset="UTF-8">
+    <title>transit</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+  
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+<!--
+  <script type="text/javascript" src="js/mapbox-gl.js"></script>
+-->
+
+    <style>
+     
+    </style>
+
+</head>
+
+<body>
+<div id="title">
+  Sketch 0:  <strong>SVI & Public Transit by Tract</strong><br>
+  <div class="dc-data-count">
+    <span class="filter-count"></span> selected out of <span class="total-count"></span> counties | <a
+    href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+  </div>
+  <br>
+  <div id="population">Containing population of 322903030</div>
+</div>
+    
+    
+<div id="container1">
+<div id = "THEME1">
+  <strong>SVI Theme 1 Socioeconomic: </strong><br>
+  <!--
+  <span class="factors">Percentile Percentage of persons below poverty estimate<br>
+    Percentile Percentage of civilian (age 16+) unemployed estimate<br>
+    Percentile per capita income estimate<br>
+    Percentile Percentage of persons with no high school diploma (age 25+) estimate<br>
+    EPL_POV + EPL_UNEMP + EPL_PCI + EPL_NOHSDP<br><br>
+    </span>-->
+  
+</div>
+<div id = "THEME2">
+  <strong>SVI Theme 2 Houshold Composition</strong><br>
+ <!--
+  <span class="factors">Percentile percentage of persons aged 65 and older estimate<br>
+   Percentile percentage of persons aged 17 and younger estimate<br>
+   Percentile percentage of civilian noninstitutionalized population with a disability estimate<br>
+   Percentile percentage of single parent households with children under 18 estimate<br>
+   EPL_AGE65 +
+   EPL_AGE17 +
+   EPL_DISABL +
+   EPL_SNGPNT<br><br>
+   </span>-->
+ 
+  
+</div>
+<div id = "THEME3">
+  <strong>SVI Theme 3 Minority Status/Language</strong><br>
+ <!--
+  <span class="factors">Percentile percentage minority (all persons except white, non-Hispanic) estimate
+  <br>
+   Percentile percentage of persons (age 5+) who speak English "less than well" estimate<br>
+   <span>
+   EPL_MINRTY + EPL_LIMENG<br><br>-->
+ 
+</div>
+<div id = "THEME4">
+  <strong>SVI Theme 4 Housing Type/Transportataion</strong><br>
+ <!--
+  <span class="factors">Percentile
+   percentage housing in structures with 10 or more units estimate
+   
+ <br>
+   Percentile percentage mobile homes estimate
+   <br>
+   Percentile percentage households with more people than rooms estimate
+   <br>
+   Percentile percentage households with no vehicle available estimate
+   <br>
+   Percentile percentage of persons in institutionalized group quarters estimate
+   <br>
+   EPL_MUNIT +EPL_MOBIL +EPL_CROWD +EPL_NOVEH +EPL_GROUPQ<br><br>
+   <span>-->
+ 
+</div>
+</div>
+<div id="container2">
+<div id = "THEMES">
+  <strong>All SVI Themes</strong><br>
+</div>
+
+<!--
+<div id="publicTransit">
+<strong>Public Transportation</strong>
+<br>
+<span class="factors">% taking public transportation above age 16<br>
+ACS/SE SE_A09005_003/SE_A09005_001*100<span>
+</div>-->
+<!--
+<div id="cases">
+  <strong>Cases</strong><br>
+</div>
+<div id="deaths">
+  <strong>Deaths</strong><br>
+</div>-->
+<br>
+<div id="casesPer100000"><br>
+    <strong>Cases Per 100,000</span></strong><br>
+</div>
+  
+<div id="STATE">
+<strong>Counties by State</strong><br>
+
+</div>
+    
+</div>
+
+<div id="container3">
+ 
+  <div id="map"> 
+</div>
+</div>
+
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+<script type="text/javascript" src="js/queue.v1.min.js"></script>
+
+<script type="text/javascript" src="counties.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+body{
+	font-family:helvetica;
+	color:#000000;
+    font-size:11px;
+    padding:10px;
+}
+a{
+	color:#aaaaaa;
+}
+
+/* for charts and maps */
+ #container1{
+     padding:10px;
+	 position:absolute;
+	 left:0px;
+     top:100px;
+     line-height:90%;
+     width:500px;
+ }
+
+ #container3{
+     padding:10px;
+	 position:absolute;
+	 left:400px;
+     top:100px;
+     line-height:90%;
+     width:800px;
+     height:100%;
+ }
+ 
+ .dc-data-count{
+     z-index:999;    
+     width:600px; 
+     font-size:14px;
+     color:#000000;
+     line-height:125%;
+ }
+ td{
+     width:80px;
+ }
+ #map{
+     height:350px;
+     width:620px;
+     padding:20px;
+     border:1px solid black;
+ }
+ #table{
+     margin-top:20px;
+     line-height:125%;
+     overflow:auto;
+     height:300px;
+ }
+ #population{
+     text-align:left;
+     z-index:999;
+     width:600px; 
+     font-size:14px;
+     color:#000000;
+     margin-top:20px;
+     line-height:125%;
+     width:640px;
+     height:110px;
+ }
+ #title{
+     position:fixed;
+     left:0px;
+     top:0px;
+     padding:10px;
+     height:80px;
+     background-color:#fff;
+     width:100%;
+     z-index:999;
+     font-size:24px;
+     border-bottom:1px solid black;
+ }
+
+ .factors{
+     font-size:10px;
+ }
