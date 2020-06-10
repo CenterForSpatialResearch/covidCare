@@ -64,6 +64,7 @@ function ready(svi,county_centroids,covid){
     var tDim = ndx.dimension(function(d){return d["covid_cases"]})
     table
         .dimension(tDim)
+        .size(svi.length)
         .order(d3.descending)
         .sortBy(function(d) { return d["covid_cases"]; })
         .showSections(false)
