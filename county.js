@@ -56,10 +56,26 @@ function ready(svi,county_centroids,covid){
         var ndx = crossfilter(combinedData);
         var all = ndx.groupAll();
 
-    scatterPlot(ndx)
+    var sw = 500
+    var sh = 500
+    scatterPlot(ndx,sw,sh,"RPL_THEMES","covid_casesPer100000",1)/*
+    
+        scatterPlot(ndx,sw,sh,"RPL_THEME1","covid_casesPer100000",1)
+        scatterPlot(ndx,sw,sh,"RPL_THEME2","covid_casesPer100000",1)
+        scatterPlot(ndx,sw,sh,"RPL_THEME3","covid_casesPer100000",1)
+        scatterPlot(ndx,sw,sh,"RPL_THEME4","covid_casesPer100000",1)
+        scatterPlot(ndx,sw,sh,"E_MINRTY","covid_casesPer100000",5000)*/
+    
+        
     rowChart("STATE",ndx,700,380,20,"#000000") 
-
-
+    drawTable(ndx,svi)
+        
+    dataCount(ndx,all)
+    dc.renderAll();
+    
+    drawMap(formattedCovidData)
+};
+function drawTable(ndx,svi){
     var table = new dc.DataTable('#table');
     var tDim = ndx.dimension(function(d){return d["covid_cases"]})
     table
@@ -132,28 +148,25 @@ function ready(svi,county_centroids,covid){
                   var blob = new Blob([d3.csvFormat(data)], {type: "text/csv;charset=utf-8"});
                   saveAs(blob, 'data.csv');
               });
+}
 
-    dataCount(ndx,all)
-    dc.renderAll();
-    
-    drawMap(formattedCovidData )
-};
-
-function scatterPlot(ndx){
+function scatterPlot(ndx,w,h,x,y,xRange){
   
-    var scatter =  new dc.ScatterPlot("#test")
+     d3.select("#scatter").append("div").attr("id",x)
+    var scatter =  new dc.ScatterPlot("#"+x)
     var dimension = ndx.dimension(function(d){
-        return [d["RPL_THEMES"],d["covid_casesPer100000"]]
+        console.log(Object.keys(d))
+        return [d[x],d[y]]
     })
     var group = dimension.group()
-    scatter.width(400)
+    scatter.width(w)
           .useCanvas(true)
-        .height(400)
+        .height(h)
         .group(group)
         .dimension(dimension)
-    .x(d3.scaleLinear().domain([-.01, 1.01]))
-    .y(d3.scaleLinear().domain([0, 15000]))
-    .xAxisLabel("SVI Percentile")
+    .x(d3.scaleLinear().domain([-.01, xRange]))
+    .y(d3.scaleLinear().domain([0, 35000]))
+    .xAxisLabel(x)
     .yAxisLabel("Cases Per 100,000")
     .excludedOpacity(0.5)
     .colors(["#000000"])

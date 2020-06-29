@@ -9,71 +9,57 @@ a{
 }
 
 /* for charts and maps */
- #container1{
+ #map{
      padding:10px;
 	 position:absolute;
 	 left:0px;
-     top:100px;
-     line-height:90%;
-     width:500px;
+     top:150px;
+     height:400px;
+     width:600px;
+     z-index:-1;
  }
 
- #container3{
-     padding:10px;
+ #byState{
 	 position:absolute;
-	 left:400px;
-     top:100px;
-     line-height:90%;
-     width:800px;
-     height:100%;
+	 left:0px;
+     top:0px;
  }
- 
- .dc-data-count{
-     z-index:999;    
-     width:600px; 
-     font-size:14px;
-     color:#000000;
-     line-height:125%;
+ #layerControl{
+	 position:absolute;
+	 left:0px;
+     top:0px;
+     z-index:999;
+     width:300px;
+     height:180px;
+     background-color:black;
+     margin:10px;
  }
- td{
-     width:90px;
+ #key{
+	 position:absolute;
+	 left:0px;
+     top:200px;
+     z-index:999;
+     width:300px;
+     height:100px;
+     margin:10px;
+     background-color:black;
  }
- #map{
-     height:350px;
-     width:620px;
-     padding:20px;
-     border:1px solid black;
+ #STATE{
+	 position:absolute;
+     top:600px;
  }
  #table{
-     margin-top:20px;
-     line-height:125%;
-     overflow:auto;
-     height:300px;
- }
- #population{
-     text-align:left;
-     z-index:999;
-     width:600px; 
-     font-size:14px;
-     color:#000000;
-     margin-top:20px;
-     line-height:125%;
-     width:640px;
-     height:110px;
- }
- #title{
-     position:fixed;
+	 position:absolute;
+     top:600px;
      left:0px;
-     top:0px;
-     padding:10px;
-     height:80px;
-     background-color:#fff;
-     width:100%;
-     z-index:999;
-     font-size:24px;
-     border-bottom:1px solid black;
  }
-
- .factors{
-     font-size:10px;
+ #download-type{
+	 position:absolute;
+     top:600px;
+     left:1000px;
+ }
+ #container3{
+	 position:absolute;
+     top:0px;
+     left:600px;
  }
